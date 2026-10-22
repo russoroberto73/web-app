@@ -1,0 +1,236 @@
+@import '@/assets/styles/main.css';
+
+#chi-sono {
+  @apply h-full w-full;
+
+  button {
+    @apply bg-yellow-500 rounded-[45px];
+    @apply mobile:w-[35px] mobile:mt-[-30px] mobile:ml-[25px];
+    @apply md:mt-[-8px];
+    @apply desktop:w-[120px];
+    @apply hover:bg-bottoni;
+  }
+  #mobile-menu-links {
+    @apply mt-7;
+    @apply md:mt-3;
+    button {
+      @apply bg-white w-[90px] mb-[30px] text-left;
+      @apply md:mb-3;
+    }
+  }
+  #Contenitore {
+    @apply w-[150px];
+    @apply desktop:w-full;
+  }
+  .card-container {
+    @apply relative flex justify-center;
+    @apply sm:w-[230px];
+    @apply lg:ml-[160px] lg:w-[400px];
+    @apply xl:w-[calc(100%-500px)];
+    @apply 2xl:w-[1100px] 2xl:m-auto;
+  }
+
+  .card {
+    @apply absolute w-full bg-white border border-gray-300 rounded-lg shadow-md cursor-pointer;
+    @apply transition-transform duration-900 ease-in-out;
+    @apply bg-gray-300;
+    filter: brightness(0.6);
+  }
+
+  /* Posizione delle card */
+
+  .card:nth-child(3) {
+    @apply z-1;
+  }
+
+  .card:nth-child(2) {
+    @apply z-2;
+  }
+
+  .card:nth-child(1) {
+    @apply z-3;
+  }
+
+  .card:nth-child(4) {
+    @apply z-4;
+  }
+
+  /* CARD 1 ATTIVA */
+
+  .card-container.active-1 .card:nth-child(1) {
+    @apply z-10 translate-x-[190px] translate-y-[120px];
+  }
+
+  .card-container.active-1 .card:nth-child(2) {
+    @apply translate-x-[80px] translate-y-[40px];
+  }
+
+  .card-container.active-1 .card:nth-child(3) {
+    @apply translate-x-[25px] translate-y-[0px];
+  }
+
+  .card-container.active-1 .card:nth-child(4) {
+    @apply translate-x-[135px] translate-y-[80px];
+  }
+
+  /* CARD 2 ATTIVA */
+
+  .card-container.active-2 .card:nth-child(1) {
+    @apply translate-x-[80px] translate-y-[80px];
+  }
+
+  .card-container.active-2 .card:nth-child(2) {
+    @apply translate-x-[190px] translate-y-[160px] z-10;
+  }
+
+  .card-container.active-2 .card:nth-child(3) {
+    @apply translate-x-[25px] translate-y-[40px];
+  }
+
+  .card-container.active-2 .card:nth-child(4) {
+    @apply translate-x-[135px] translate-y-[120px];
+  }
+
+  /* CARD 3 ATTIVA */
+
+  .card-container.active-3 .card:nth-child(1) {
+    @apply translate-x-[80px] translate-y-[80px];
+  }
+
+  .card-container.active-3 .card:nth-child(2) {
+    @apply translate-x-[25px] translate-y-[40px];
+  }
+
+  .card-container.active-3 .card:nth-child(3) {
+    @apply translate-x-[190px] translate-y-[160px] z-10;
+  }
+
+  .card-container.active-3 .card:nth-child(4) {
+    @apply translate-x-[135px] translate-y-[120px];
+  }
+
+  /* CARD 4 ATTIVA */
+
+  .card-container.active-4 .card:nth-child(1) {
+    @apply translate-x-[135px] translate-y-[120px];
+  }
+
+  .card-container.active-4 .card:nth-child(2) {
+    @apply translate-x-[80px] translate-y-[80px];
+  }
+
+  .card-container.active-4 .card:nth-child(3) {
+    @apply translate-x-[25px] translate-y-[40px];
+  }
+
+  .card-container.active-4 .card:nth-child(4) {
+    @apply translate-x-[190px] translate-y-[160px];
+  }
+
+  /* Etichetta */
+
+  .card-label {
+    background: #f1f3f5;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  .card.active {
+    @apply bg-white;
+    filter: brightness(1);
+    .card-label {
+      background: #007bff;
+      @apply bg-bottoni;
+      @apply text-sfondo;
+    }
+  }
+  /* Contenuto */
+
+  .card-content {
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+  }
+}
+
+#MiPresento {
+  @apply h-full w-[100%];
+  #GalleriaFoto {
+    @apply flex justify-between items-center gap-2 mb-9;
+    img {
+      @apply w-[120px] object-cover;
+      @apply desktop:w-[180px];
+    }
+  }
+  #TestoFoto {
+    @apply col-span-4;
+    img {
+      @apply float-right top-0 mt-0 w-[50px] ml-2;
+      @apply md:w-[150px];
+      @apply desktop:w-[300px];
+    }
+    p {
+      @include TestoPagina;
+      color: var(--Testo);
+      @apply desktop:ml-[30px] mb-[30px];
+      @screen mobile {
+        @apply m-5;
+      }
+    }
+    #Mauro {
+      @apply mr-4 float-right pl-3 items-end;
+      @apply mobile-xs:w-[50px];
+      @apply desktop:w-[300px];
+    }
+  }
+}
+
+#PianoStudi {
+  button {
+    @apply w-[50px] p-[5px];
+    &:hover {
+      @apply bg-bottoni;
+    }
+  }
+  th {
+    @apply bg-IntestazioneTabella text-black;
+  }
+  img {
+    @apply mobile:h-[100px];
+  }
+  p {
+    @include TestoPagina;
+    @apply mx-3;
+  }
+  h1 {
+    @include TitoloPagina;
+  }
+}
+
+#RicercaDelSe {
+  .layout {
+    @apply shrink-0;
+    img {
+      @apply w-[70px] h-auto object-contain float-left pr-2 pb-2;
+      @apply mobile-xs:w-[50px];
+      @apply desktop:w-[180px];
+    }
+  }
+  .testo {
+    @apply flex-1;
+  }
+
+  .testo h2 {
+    @apply mb-4;
+  }
+  #Numerologia {
+    h2 {
+      @apply text-[25px];
+    }
+  }
+}

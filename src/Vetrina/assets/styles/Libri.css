@@ -1,0 +1,201 @@
+@import '@/assets/styles/main.css';
+#Libri {
+  @apply text-white text-center;
+
+  #Grid {
+    @apply grid grid-cols-2 gap-3 items-start;
+    @variant md {
+      @apply gap-7 mx-[50px];
+    }
+    @variant lg {
+      @apply gap-7 mx-[770px];
+    }
+    @variant xl {
+      @apply gap-[200px] mx-[150px];
+    }
+    @variant 2xl {
+      @apply gap-[10px] mx-[100px]
+    }
+    h2 {
+      @apply bg-sfondo text-white mt-0 pb-3;
+      @variant md {
+        @apply text-2xl font-bold ;
+      }
+      @variant lg {
+        @apply text-3xl font-bold;
+      }
+    }
+    .LibriListNonArrendersiMai {
+      &:has(.Carta.Girata) {
+        @variant mobile-xs {
+          @apply pb-[2410px];
+        }
+        @variant sm {
+          @apply pb-[1350px];
+        }
+        @variant md {
+          @apply pb-[1110px];
+        }
+        @variant lg {
+          @apply pb-[685px];
+        }
+        /*
+        @variant xl {
+          @apply pb-[740px];
+        }
+        @variant 2xl {
+          @apply pb-[390px];
+        }*/
+      }
+    }
+    .LibriListLaStradaVersoMe {
+      &:has(.Carta.Girata) {
+        @variant mobile-xs {
+          @apply pb-[2135px];
+        }
+        @variant sm {
+          @apply pb-[1190px];
+        }
+        @variant md {
+          @apply pb-[890px] mb-[20px];
+        }
+        @variant lg {
+          @apply pb-[685px] mb-[20px];
+        }/*
+        @variant xl {
+          @apply pb-[540px] mb-[20px];
+        }
+        @variant 2xl {
+          @apply pb-[240px] mb-[20px];
+        }*/
+      }
+    }
+    .LibriList {
+      &:has(.Carta.Girata) {
+        @apply bg-bottoni;
+      }
+      img {
+        @apply w-[150px] h-[200px] mx-auto my-4;
+        @variant md {
+          @apply w-[300px] h-[400px] mx-auto my-4;
+        }
+        @variant lg {
+          @apply w-[900px] h-[700px] mx-auto my-4;
+        }
+        @variant xl {
+          @apply w-[700px] h-[450px]
+        }
+        @variant 2xl {
+          @apply w-[800px] h-[800px]
+        }
+      }
+      .Carta {
+        @apply cursor-pointer perspective-[1000px];
+
+        .CartaInterno {
+          @apply relative w-full mb-9
+         transform-3d transition-transform duration-700 ease-in-out;
+
+          .CartaFaccia {
+            @apply absolute inset-0 w-full box-border rounded-[10px]
+         [backface-visibility:hidden];
+          }
+
+          .CartaFronte {
+            @apply flex flex-col items-center;
+            img {
+              @apply block object-contain;
+            }
+          }
+          #NonArrendesiMai,
+          #LaStradaVersoMe {
+            @apply rotate-y-180 flex flex-col justify-center bg-[#28547f] p-5 text-center text-white [overflow-wrap:anywhere] text-justify;
+            @variant mobile-xs {
+              @apply w-[165px];
+            }
+            @variant sm {
+              @apply w-[250px];
+            }
+            @variant md {
+              @apply w-[300px];
+            }
+            @variant lg {
+              @apply w-[460px];
+            }/*
+            @variant xl {
+              @apply w-[450px];
+            }
+            @variant 2xl {
+              @apply w-[1115px];
+            }*/
+          }
+          #NonArrendesiMai {
+            @variant mobile-xs {
+              @apply h-[2350px] ml-[13px] mt-[-25px];
+            }
+            @variant sm {
+              @apply h-[1350px] ml-[10px] mt-[-25px];
+            }
+            @variant md {
+              @apply h-[1080px] ml-[10px] mt-[-25px];
+            }
+            @variant lg {
+              @apply  ml-[15px] mt-[-25px] h-[700px];
+            }
+            /*
+            @variant xl {
+              @apply h-[750px] ml-[10px] mt-[-25px];
+            }
+            @variant 2xl {
+              @apply h-[400px] ml-[10px] mt-[-25px];
+            }*/
+            div {
+              @variant mobile-xs {
+                @apply mt-[0px];
+              }
+              @variant sm {
+                @apply mt-[0px];
+              }
+            }
+          }
+
+          #LaStradaVersoMe {
+            @variant mobile-xs {
+              @apply h-[2150px] ml-[13px] mt-[-25px];
+            }
+            @variant sm {
+              @apply h-[1200px] ml-[8px] mt-[-25px];
+            }
+            @variant md {
+              @apply h-[900px] mt-[-25px];
+            }
+            @variant lg {
+              @apply h-[700px] ml-[15px] mt-[-25px];
+            }
+            /*
+            @variant xl {
+              @apply h-[550px] ml-[10px] mt-[-25px];
+            }
+            @variant 2xl {
+              @apply h-[250px] ml-[10px] mt-[-25px];
+            }*/
+          }
+
+          button {
+            @apply mt-4 cursor-pointer;
+          }
+
+          p {
+            @apply mb-0;
+          }
+        }
+
+        &.Girata {
+          .CartaInterno {
+            @apply rotate-y-180;
+          }
+        }
+      }
+    }
+  }
+}

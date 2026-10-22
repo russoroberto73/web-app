@@ -1,0 +1,7 @@
+@import "@/assets/styles/main.css";
+
+div {
+    @include TestoPagina;
+    @apply text-justify;
+    @apply desktop:leading-8;
+}

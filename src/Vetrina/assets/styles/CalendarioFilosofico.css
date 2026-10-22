@@ -1,0 +1,104 @@
+@import '@/assets/styles/main.css';
+
+#CalendarioFilosofico {
+  #TabellaMese {
+    @apply w-[90%] pt-3  bg-white m-auto;
+    @apply desktop:w-[1080px];
+  }
+  #body {
+    @apply bg-white w-[300px] sm:w-[400px] lg:w-[600px] xl:w-[600px] 2xl:w-[800px] m-auto pt-3;
+  }
+  h1 {
+    @include TitoloPagina;
+  }
+  .BTNAnno {
+    @apply m-3 p-2 border border-bottoni rounded-[45px] hover:bg-bottoni;
+  }
+  img {
+    width: 100%;
+  }
+
+  .BtnCambiaMese {
+    @apply m-3 p-2 rounded-[45px] bg-bottoni;
+  }
+  .AnnoAttivo {
+    @apply bg-bottoni;
+  }
+
+  .Giorno {
+    display: flex;
+    float: left;
+    font-family: Lucida Calligraphy;
+    justify-content: center;
+    @apply bg-bottoni;
+    font-size: 25px;
+    border-radius: 45px;
+    @apply p-5 m-3 mt-[-20px] ml-[20px];
+  }
+
+  .Frase {
+    font-size: 18px;
+    color: #ffb912;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 60px !important;
+    font-family: Lucida Calligraphy !important;
+    background-color: #333131;
+    -webkit-box: 0 4px 2px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: -20px 30px 20px -6px rgba(0, 0, 0, 0.75);
+    border-radius: 45px;
+    @screen desktop {
+      @apply min-h-[130px];
+    }
+  }
+  .Firma {
+    font-family: Lucida Calligraphy !important;
+    color: #ffb912;
+    text-align: right;
+    font-size: 15px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    padding: 10px;
+  }
+  .BtnCambiaMese {
+    @apply m-3 p-2 rounded-[45px] bg-bottoni;
+  }
+  .AnnoAttivo {
+    @apply bg-bottoni;
+  }
+  .slider {
+    background-color: red;
+    position: relative;
+    @apply mobile-xs:w-[200px];
+    @apply sm:w-[300px];
+    @apply lg:w-[500px];
+    @apply xl:w-[600px];
+    @apply 2xl:w-[700px];
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slides img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  buttonp {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .precedente,
+  .successiva {
+    @apply flex items-center justify-center h-full text-[30px] w-[50px] cursor-pointer;
+  }
+}

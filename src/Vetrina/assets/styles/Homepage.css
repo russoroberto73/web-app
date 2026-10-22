@@ -1,0 +1,102 @@
+@import '@/assets/styles/main.css';
+#Homepage {
+  #Desktop {
+    @apply hidden desktop:block;
+  }
+
+  #Mobile {
+    @apply desktop:hidden;
+    @apply h-[calc(100vh-30px)];
+    @apply w-full;
+  }
+
+  div,
+  p,
+  h1,
+  h2 {
+    @apply text-testo;
+  }
+
+  h1 {
+    @apply text-[45px];
+    @apply text-center;
+    @apply xl:text-left lg:ml-[50px] lg:font-extrabold;
+
+    @variant desktop {
+      @apply text-left before:absolute before:mt-[30px] before:ml-[-50px] before:content-[''] before:h-[10px] before:w-[40px] before:rounded-[40px] before:bg-bottoni;
+    }
+    @variant 2xl {
+      @apply ml-[250px];
+    }
+  }
+
+  h2 {
+    @apply text-[35px] text-bottoni font-extrabold;
+    @apply text-center mb-[30px];
+    @apply desktop:text-left desktop:ml-[50px] desktop:mb-[50px] desktop:mt-[15px] 2xl:mt-3;
+    @apply 2xl:ml-[255px];
+  }
+
+  #Cornice {
+    @apply fixed rotate-[-15deg] bg-bottoni z-0 h-[250%] top-[-83%] left-[-250px] w-[450px];
+    @apply 2xl:w-[600px];
+  }
+
+  #Body {
+    @apply text-[25px] desktop:w-[calc(100%-850px)] desktop:h-[calc(100vh-30px)] desktop:ml-[700px] grid grid-rows-3;
+    @apply xl:ml-[500px] xl:w-[calc(100%-650px)];
+  }
+
+  p {
+    @apply testo-pagina;
+    @apply block m-auto;
+    @apply mt-[20px] ml-[0px] mb-[20px];
+    @apply mobile:m-4;
+    @apply desktop:mr-[150px] desktop:mb-[50px];
+    @apply 2xl:ml-[200px];
+  }
+
+  #Citazione {
+    @apply testo-pagina;
+    @apply desktop:mt-[50px] justify-center items-center flex;
+    @apply mobile:mt-[0px];
+    @apply mobile:h-[260px] mobile:grid mobile:grid-cols-[60px_1fr];
+    span {
+      @apply mobile:self-start;
+    }
+    @variant xl {
+      @apply ml-[-15px];
+    }
+  }
+
+  .Foto {
+    @apply bg-cover bg-top relative;
+    @apply h-[300px] w-[270px] rounded-[50%] m-auto mt-[20px] max-w-[100%];
+
+    @variant desktop {
+      @apply fixed rounded-[0] h-[calc(100vh-80px)] w-[400px] left-[35px] top-[20px] float-left;
+    }
+
+    @variant 2xl {
+      @apply w-[600px];
+    }
+  }
+
+  svg {
+    @apply float-left;
+    @apply mr-[20px] mb-[60px];
+    @apply lg:mb-[150px];
+  }
+
+  .svg {
+    @apply hidden;
+    @apply float-left mr-5 w-[50px] mr-5 mb-[80px];
+    @apply desktop:block;
+  }
+
+  #DivBottonePagina {
+    @apply relative mt-[0px] w-[120px] h-[70px] z-0;
+    @apply mobile:ml-[10px] mobile:mt-[50px];
+    @apply 2xl:ml-[200px];
+  }
+}

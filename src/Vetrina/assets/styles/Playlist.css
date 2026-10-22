@@ -1,0 +1,27 @@
+@import '@/assets/styles/main.css';
+
+#Playlist {
+  h1 {
+    @include TitoloPagina;
+  }
+  #Grid {
+    @apply grid grid-cols-1 md:grid-cols-3 w-[235px] md:w-[650px] desktop:w-[900px] md:gap-5 m-auto;
+  }
+  color: #fff;
+  .box {
+    margin: 0 auto;
+    @screen xl {
+      width: 1050px;
+    }
+    @screen lg {
+      width: 790px;
+    }
+    @screen md {
+      width: 550px;
+    }
+    @screen xs {
+      width: 260px;
+      margin: 0 auto;
+    }
+  }
+}

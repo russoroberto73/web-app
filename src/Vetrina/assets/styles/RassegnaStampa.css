@@ -1,0 +1,54 @@
+@import '@/assets/styles/main.css';
+
+#RassegnaStampa {
+  @apply w-full text-testo;
+
+  .RassegnaStampaContainer {
+    @apply w-[90%] desktop:ml-[20px];
+  }
+  .Box {
+    @apply bg-SfondoRassegna border-[3px] border-bottoni m-[10px] rounded-[45px] grid grid-cols-2;
+  }
+  h3 {
+    @apply text-bottoni text-[30px] text-center;
+  }
+  img {
+    @apply mobile:w-[100px] desktop:h-[400px] m-auto mb-5 cursor-pointer;
+  }
+
+  #RassegnaStampaFinestraModaleArticolo {
+    h1 {
+      @apply text-bottoni text-center font-extrabold;
+      @apply text-[3.0vw];
+    }
+    #FinestaModaleOpacity {
+      @apply fixed absolute bg-sfondo opacity-75 inset-0;
+    }
+    #BackgroundFinestraModale {
+      @apply relative rounded-lg bg-sfondo shadow-xl border-[10px] border-bottoni overflow-y-auto;
+      @apply m-4 w-[1000px] h-[100vh] 2xl:w-[1200px];
+    }
+    #DivChiudi {
+      @apply float-right m-3;
+      @screen mobile {
+        @apply relative left-[10px] top-[-80px];
+      }
+      @apply md:mt-[35px];
+      @apply desktop:mt-[-60px];
+    }
+    #Chiudi {
+      @apply cursor-pointer;
+    }
+    #Box {
+      @apply m-6 mt-0 p-9 text-white bg-white text-[18px] h-full;
+      @apply md:text-[28px];
+      img {
+        @apply h-[100%];
+      }
+    }
+    .svg {
+      @apply w-[30px] float-left mr-2 pt-1;
+      @apply mobile:h-[70px];
+    }
+  }
+}

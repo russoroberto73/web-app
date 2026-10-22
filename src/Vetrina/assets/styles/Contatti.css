@@ -1,0 +1,12 @@
+@import '@/assets/styles/main.css';
+
+#Contatti {
+  @apply m-auto text-white;
+  div {
+    @include TestoPagina;
+  }
+
+  h1 {
+    @include TitoloPagina;
+  }
+}

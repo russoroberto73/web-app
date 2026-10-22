@@ -1,0 +1,216 @@
+@import '@/assets/styles/main.css';
+#handiphone {
+  @apply w-[calc(100%-20px)] mobile-xs:mx-[10px];
+  @variant sm {
+    @apply w-[calc(100%-40px)] mx-[20px];
+  }
+  @variant md {
+    @apply w-[calc(100%-60px)] mx-[30px];
+  }
+  @variant desktop {
+    @apply w-[calc(100%-100px)];
+  }
+  @variant 2xl {
+    @apply w-[800px] m-auto;
+  }
+  h1 {
+    @include TitoloPagina;
+    @apply mb-[70px] mt-[50px];
+  }
+}
+#handiphoneideatore {
+  .Grid {
+    @apply grid;
+    @variant mobile-xs {
+      @apply grid-cols-[100px_auto_auto_auto];
+    }
+    @variant sm {
+      @apply grid-cols-[150px_auto_auto_auto];
+    }
+    @variant md {
+      @apply grid-cols-[200px_auto_auto_auto];
+    }
+    @variant lg {
+      @apply grid-cols-[230px_auto_auto_auto];
+    }
+    @variant desktop {
+      @apply grid-cols-[400px_auto_auto_auto];
+    }
+  }
+
+  img {
+    @apply bg-cover m-auto;
+    @apply sm:w-[200px];
+    @apply md:w-[400px];
+  }
+
+  #IngInf {
+    /* @apply bg-red-100; */
+    @apply text-center;
+    @apply text-bottoni font-bold;
+    @variant mobile-xs {
+      @apply text-[25px] w-[150px] mt-[0px] ml-[10px];
+    }
+    @variant sm {
+      @apply text-[30px] w-[180px] h-[150px] mt-[0px] ml-[10px];
+    }
+    @variant md {
+      @apply text-[40px] w-[245px] h-[238px] mt-[0px] ml-[10px];
+    }
+    @variant lg {
+      @apply text-[60px] w-[340px] h-[300px] lg:mt-[0px];
+    }
+    @variant desktop {
+      @apply desktop:text-[45px] desktop:mt-[0px] desktop:ml-[0px];
+    }
+  }
+
+  #Lavoro {
+    /* @apply bg-red-100; */
+    @apply text-center;
+    @variant mobile-xs {
+      @apply text-[30px];
+    }
+    @apply text-amber-500;
+    @variant sm {
+      @apply text-[50px] mt-[20px];
+    }
+    @variant md {
+      @apply text-[50px];
+    }
+    @variant lg {
+      @apply text-[80px] mt-[10px];
+    }
+    @apply desktop:ml-[0px] desktop:text-[90px] desktop:mt-[30px] desktop:h-[150px];
+  }
+  #Esperienza {
+    @apply hidden;
+    /* @apply bg-red-200; */
+    @apply text-white rotate-90 inline-block text-center;
+    @variant mobile-xs {
+      @apply text-[23px] ml-[-135px] mt-[0px] w-[120px];
+    }
+    @variant sm {
+      @apply text-[33px] ml-[-130px] mt-[35px] w-[215px] h-[115px];
+    }
+    @variant md {
+      @apply text-[50px] ml-[-90px] mt-[0px];
+    }
+    @variant lg {
+      @apply text-[60px] ml-[-90px] mt-[60px];
+    }
+    @variant xl {
+      @apply text-[60px] ml-[-180px] mt-[60px];
+    }
+    @variant 2xl {
+      @apply text-[60px] h-[290px] mt-[-20px] ml-[-190px];
+    }
+  }
+  #Pensiero {
+    @apply hidden;
+    /* @apply bg-red-100; */
+    @apply text-bottoni;
+    @apply text-right grid grid-rows-3;
+    @variant mobile-xs {
+      @apply text-[30px] mt-[0px] ml-[-65px] w-[50px] h-[120px];
+    }
+    @variant sm {
+      @apply text-[45px] mt-[0px] ml-[-90px] w-[110px]  h-[150px];
+    }
+    @variant md {
+      @apply text-[80px] mt-[-30px] h-[220px] ml-[-20px];
+    }
+    @variant lg {
+      @apply text-[90px] h-[290px] mt-[-20px] ml-[-90px];
+    }
+    @variant xl {
+      @apply text-[90px] h-[290px] mt-[-20px] ml-[-130px];
+    }
+    @variant 2xl {
+      @apply text-[90px] h-[290px] mt-[-20px] ml-[30px];
+    }
+}
+  #Descrizione {
+    font-family: 'Mallanna' !important;
+    @apply text-center text-white;
+    @variant mobile-xs {
+      @apply col-span-3 text-[16px] pt-[60px] mt-[-10px];
+    }
+    @variant sm {
+      @apply col-span-4 text-[21px] mt-[50px];
+    }
+    @variant md {
+      @apply text-[21px] mt-[20px];
+    }
+    @variant lg {
+      @apply col-span-3 text-[25px];
+    }
+    @variant desktop {
+      @apply mt-[20px] text-[27px] leading-[2] w-[550px] mx-2;
+    }
+  }
+}
+
+#handiphonedescrizione {
+  @apply text-center text-white mt-[20px] m-auto;
+  #Testo {
+    @apply text-right mobile-xs:!mx-[20px];
+    background-image: url('@/Vetrina/views/handiphone/immagini/Parlino.png');
+    @apply bg-[auto_80px] bg-no-repeat bg-left-bottom pl-6 m-auto text-[17px];
+    @apply sm:w-[400px] sm:bg-[auto_120px] sm:text-[20px];
+    @apply md:bg-[auto_200px] md:h-[550px] md:text-[25px] md:w-[600px];
+    @apply desktop:w-[700px] desktop:h-[350px] desktop:bg-[auto_200px] desktop:text-[30px];
+  }
+}
+
+#handiphonespecifiche {
+  h2 {
+    @apply text-bottoni pb-3 pt-6 text-[25px];
+    @apply md:text-[25px];
+  }
+  p {
+    @include TestoPagina;
+    @apply text-white p-0 m-0 text-left;
+    @apply text-[10px];
+    @apply sm:text-[14px];
+    @apply md:text-[20px];
+    @apply desktop:text-[23px];
+  }
+  #AltaPersonalizzazione {
+    background-image: url('@/Vetrina/views/handiphone/immagini/Apphp.png');
+    @apply bg-[90px_auto] bg-no-repeat bg-right-top;
+    @apply sm:bg-[100px_auto];
+    @apply md:bg-[150px_auto];
+    @apply lg:bg-[200px_auto];
+    @apply desktop:bg-[200px_auto] desktop:h-[100px];
+    @apply text-white;
+  }
+}
+
+#handiphonespecifiche,
+#handiphoneideatore,
+#handiphonedescrizione {
+  #handiphonemenu {
+    @apply py-[15px] w-full text-center;
+    @variant mobile-xs {
+      @apply col-span-3 mt-[50px] mr-[10px];
+    }
+    @variant sm {
+      @apply col-span-4 mt-[50px];
+    }
+    @variant md {
+      @apply col-span-4 mt-[95px] text-[18px];
+    }
+    @variant lg {
+      @apply mt-[80px] text-[23px];
+    }
+    @variant desktop {
+      @apply text-[25px] mt-[140px] w-[100%] m-auto justify-center flex;
+    }
+
+    a {
+      @apply text-black w-[fit-content] rounded-[45px] p-[5px] bg-bottoni text-black m-3 px-8;
+      @apply mobile-xs:p-2;
+    }
+  }
+}

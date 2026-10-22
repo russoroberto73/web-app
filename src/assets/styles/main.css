@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-weather-primary: #00668a;
+  --color-weather-secondary: #004e71;
+
+  --color-testo: white;
+  --color-sfondo: #1C3D64;
+  --color-bottoni: #F4C95D;
+  --color-menu-sfondo: #28547F;
+  --color-icona-menu-sfondo: #32658F;
+  --color-RisultatiQuadrato: #252525;
+  --color-RouterView: #444;
+  --color-RouterViewLink: #bbb;
+  --color-RouterViewLinkActive: #999;
+  --color-debug: gray;
+  --color-IntestazioneTabella: #bbd6ea;
+  --color-SfondoRassegna: #28547F;
+
+  --font-roboto: Roboto, sans-serif;
+
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 481px;
+  --breakpoint-md: 641px;
+  --breakpoint-lg: 769px;
+  --breakpoint-xl: 1025px;
+  --breakpoint-2xl: 1530px;
+}
+
+
+@custom-variant mobile (@media (max-width: 1024px));
+@custom-variant mobile-xs (@media (max-width: 480px));
+@custom-variant desktop (@media (min-width: 1025px));
+@custom-variant boxBottone-hover (&:where(#boxBottone:hover *));
+
+.TitoloPagina {
+  @apply text-bottoni font-black m-[0px] text-center my-[50px];
+  @apply text-[6vw] desktop:text-[80px] w-[100%];
+  h1 {
+    @apply mt-9;
+  }
+}
+
+@utility testo-pagina {
+  @apply text-justify text-[1.2rem] m-5;
+}
+.Debug {
+  @apply bg-debug rounded-[45px] p-[15px] text-bottoni font-extrabold;
+}

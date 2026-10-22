@@ -1,0 +1,31 @@
+@import '@/assets/styles/main.css';
+
+svg {
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+#boxBottone {
+  @apply relative inline-flex rounded-[95px] border bg-sfondo;
+  @apply border-bottoni;
+  @apply bg-sfondo pl-4;
+  @apply font-medium transition-all;
+  @apply h-[50px] w-[215px];
+}
+
+#SpanBottone {
+  @apply absolute bottom-1 left-[125px] mb-[43px] h-[46px] w-[30px]
+             translate-x-full translate-y-full rounded-l-[45px]
+             bg-bottoni transition-all duration-500 ease-out boxBottone-hover:bg-bottoni
+             boxBottone-hover:w-[150px] boxBottone-hover:left-[0px] boxBottone-hover:pr-[175px] boxBottone-hover:translate-x-0;
+}
+
+#SpanEtichetta {
+  @apply relative w-full text-left;
+  @apply transition-colors duration-300 ease-in-out;
+  @apply mobile:mt-3 mobile:text-[19px];
+  @apply desktop:mt-2;
+}
+#DivFreccia {
+  @apply z-10 w-[50px] pr-[60px] rounded-[45px] bg-bottoni text-testo;
+}

@@ -1,0 +1,9 @@
+@import '@/assets/styles/main.css';
+#TestBreakpoint {
+  @apply fixed z-10 top-0 bg-red-400 mobile-xs:bg-yellow-900 sm:bg-blue-600 md:bg-gray-700 lg:bg-yellow-900 xl:bg-red-700 2xl:bg-blue-600 p-5 text-white text-[1rem];
+}
+
+#Pagina {
+  @apply w-[100%] h-[100vh] bg-sfondo;
+  @apply mobile:w-[100%];
+}

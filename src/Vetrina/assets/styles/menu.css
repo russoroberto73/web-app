@@ -1,0 +1,64 @@
+@import '@/assets/styles/main.css';
+
+#MenuPagina {
+  @apply fixed block bg-menu-sfondo z-10;
+  #Mobile {
+    @apply desktop:hidden;
+  }
+
+  @variant mobile {
+    @apply desktop:hidden;
+    @apply h-[67px] left-[0] bottom-[0] w-[100%] p-[9px] z-100;
+    #Mobile {
+      @apply flex justify-around w-full h-[67px];
+      li {
+        @apply relative bg-icona-menu-sfondo text-testo rounded-[50%] cursor-pointer;
+        @apply w-[40px] h-[40px] ml-[-10px] mt-[10px] mb-[10px];
+        a {
+          @apply text-white rounded-[50%];
+          span {
+            @apply rounded-[50px];
+          }
+        }
+      }
+    }
+  }
+
+  @variant desktop {
+    @apply right-[15px] top-[50%] w-[70px] pr-[20px] translate-y-[-50%] pr-[20px];
+    ul {
+      @apply grid relative w-[0px] m-auto;
+      li {
+        @apply relative bg-icona-menu-sfondo text-testo rounded-[50%] cursor-pointer;
+        @apply w-[50px] h-[50px] ml-[-10px] mt-[10px] mb-[10px];
+        a {
+          @apply relative;
+          @apply h-[55px];
+          @apply inline-flex;
+          @apply items-center;
+          @apply justify-start;
+
+          @apply font-medium transition-all rounded-[45px] hover:bg-bottoni pl-4 hover:pl-[40px] text-[0px] hover:text-[25px];
+          @apply mt-[0px];
+          span {
+            @apply top-[0px] rounded bg-bottoni absolute bottom-0 left-0 translate-x-full duration-[300ms] ease-out transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0 group-hover:z-[11] text-[0px] hover:text-[25px];
+          }
+          .Etichetta {
+            @apply relative w-full mt-[0px] transition-colors duration-[300ms] ease-in-out;
+          }
+          .Icona {
+            @apply desktop:mt-[-30px] pl-[20px] text-right flex justify-end rounded-[45px] text-testo;
+          }
+        }
+      }
+    }
+  }
+  .icone-cerchio-attivo {
+    @apply !bg-bottoni rounded-[50%] mobile:h-[40px] mobile:w-[45px];
+  }
+
+  svg {
+    @apply block mt-[25px] ml-[10px] font-[19px] text-white;
+    @apply mobile:ml-[5px] mobile:mt-[5px];
+  }
+}

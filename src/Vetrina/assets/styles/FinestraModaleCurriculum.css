@@ -1,0 +1,128 @@
+@import '@/assets/styles/main.css';
+
+h3 {
+  @apply text-bottoni text-center font-extrabold p-3;
+  @apply text-[20px];
+  @apply md:text-[35px];
+}
+#FinestaModaleOpacity {
+  @apply fixed absolute bg-sfondo opacity-75 inset-0;
+}
+#BackgroundFinestraModale {
+  @apply relative rounded-lg bg-sfondo shadow-xl border-[10px] border-bottoni overflow-y-auto overflow-x-hidden;
+  @apply w-[100%] mr-[20px];
+  @apply m-4 desktop:w-[1000px] h-[100vh] 2xl:w-[1200px];
+}
+#DivChiudi {
+  @apply float-right;
+  @apply ml-[30px] mt-[-60px];
+  @apply md:mt-[-75px] md:ml-[10px];
+  button {
+  @apply mt-[10px] w-[50px];
+  }
+}
+#Risultati {
+  @apply w-[350px] m-auto;
+  @apply md:w-[800px];
+  @apply lg:w-[800px];
+  @screen desktop {
+    @apply w-[800px] h-[330px] text-start;
+  }
+}
+#Competenze {
+  @apply m-auto;
+  @apply w-[304px] h-[900px];
+  @screen md {
+    @apply w-[760px] h-[400px];
+  }
+  @apply lg:w-[760px];
+  @apply xl:h-[390px];
+}
+#Esperienze {
+  @apply w-[100%] h-[90px];
+  h3 {
+    @apply mt-[40px];
+  }
+}
+.StudiLavoro
+ {
+  h3 {
+    @apply mb-[40px];
+  }
+}
+
+#InformazioniPersonali {
+  @apply grid grid-cols-2 text-testo p-2 desktop:grid-cols-1;
+  @apply text-[11px];
+  @apply w-[fit-content] h-full;
+  @apply mobile-xs:ml-[28px];
+  @apply sm:text-[17px] sm:w-[550px];
+  @apply md:float-left md:text-[14px] md:top-[70px] md:relative md:w-[360px];
+  @apply lg:relative lg:float-left lg:top-[70px] lg:left-[10px] lg:w-[560px];
+  @variant desktop {
+    @apply top-[10px] float-left text-[27px] ml-[40px];
+  }
+
+  .Titolo {
+    @apply opacity-[0.8];
+  }
+
+  .Dato {
+    @apply ml-1 md:font-normal;
+  }
+}
+
+#Risultati {
+  #Grid {
+    @apply grid grid-cols-2 m-2 text-start;
+    @apply text-testo;
+    @apply w-[300px];
+    @apply mobile-xs:ml-[10px];
+    @apply md:w-[330px];
+    @apply lg:ml-[150px] desktop:ml-[80px];
+    @apply desktop:w-[430px];
+
+    .quadrato {
+      @apply m-2 border-[5px] rounded-[15px] border-gray-800;
+      @apply h-[135px] w-[145px];
+      @apply md:w-[140px];
+      @apply lg:w-[150px];
+      p {
+        @apply text-[14px] text-testo pl-[45px] mt-[-15px] ml-[-25px] w-[170px];
+        &:before {
+          @apply absolute content-[''] left-[0px] top-[13px] h-[1px];
+        }
+      }
+    }
+    h3 {
+      @apply relative inline-block ml-2 text-[40px] text-bottoni font-bold;
+      &:after {
+        @apply absolute content-['+'] text-[30px] top-[-2px] font-light;
+      }
+    }
+  }
+}
+.StudiLavoro
+{
+ ul {
+    @apply text-testo mx-[30px] text-start;
+    li {
+      @apply grid mt-[45px];
+      .icon {
+        @apply grid grid-cols-2 float-left w-[40px] h-[40px] leading-[40px] text-center rounded-[50%] text-testo bg-bottoni pt-1 pl-2;
+        span {
+          @apply flex inline-block text-testo w-[110px] mt-[-10px] ml-[20px] float-left opacity-[0.8];
+          @apply text-[12px] mb-[12px] rounded-[20px] font-semibold;
+          @apply h-[40px] pl-[10px] text-center bg-gray-800;
+        }
+      }
+      h5,
+      p {
+        @apply p-0 m-0 !ml-[50px] !mr-0 text-left;
+      }
+    }
+    svg {
+      @apply ml-[0px] text-testo;
+    }
+  }
+}
